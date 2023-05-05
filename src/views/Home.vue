@@ -145,6 +145,44 @@
         />
       </div>
     </div>
+
+    <div class="px-8 mt-8 min-w-[800px]">
+      <div class="py-3"></div>
+      <p class="text-center pb-6 text-[#D1D1D6] text-sm">
+        Unlock Flow by selecting your favourite artists for improved recommendations.
+      </p>
+
+      <div class="flex justify-center gap-7 w-full">
+        <div class="flex items-center justify-center relative">
+          <!-- HINT: The tip is z-index and left measurements. Thus they appear each behind and overlapping  -->
+          <img
+            width="100"
+            class="absolute -left-36 rounded-full z-0 cursor-pointer"
+            src="https://picsum.photos/id/188/300/300"
+          />
+          <img
+            width="115"
+            class="absolute -left-[80px] rounded-full z-10 cursor-pointer"
+            src="https://picsum.photos/id/66/300/300"
+          />
+          <img
+            width="160"
+            class="rounded-full z-20 cursor-pointer"
+            src="https://picsum.photos/id/144/300/300"
+          />
+          <img
+            width="115"
+            class="absolute -right-[80px] rounded-full z-10 cursor-pointer"
+            src="https://picsum.photos/id/141/300/300"
+          />
+          <img
+            width="100"
+            class="absolute -right-36 rounded-full z-0 cursor-pointer"
+            src="https://picsum.photos/id/222/300/300"
+          />
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
