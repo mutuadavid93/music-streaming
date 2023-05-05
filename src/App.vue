@@ -78,6 +78,6 @@ import SideMenuItem from "@/components/SideMenuItem.vue";
     id="TheBox"
     class="fixed w-[calc(100%-240px)] h-[calc(100%-56px)] ml-[240px] mt-[56px] overflow-x-auto"
   >
-    <!-- <RouterView /> -->
+    <RouterView class="text-[#FFFFFF]"/>
   </div>
 </template>
