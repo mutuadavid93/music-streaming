@@ -154,7 +154,7 @@
 
       <div class="flex justify-center gap-7 w-full">
         <div class="flex items-center justify-center relative">
-          <!-- HINT: The tip is z-index and left measurements. Thus they appear each behind and overlapping  -->
+          <!-- HINT: The tip is z-index, width and left measurements. Thus they appear each behind and overlapping  -->
           <img
             width="100"
             class="absolute -left-36 rounded-full z-0 cursor-pointer"
@@ -168,7 +168,7 @@
           <img
             width="160"
             class="rounded-full z-20 cursor-pointer"
-            src="https://picsum.photos/id/144/300/300"
+            src="https://picsum.photos/id/120/300/300"
           />
           <img
             width="115"
@@ -181,6 +181,14 @@
             src="https://picsum.photos/id/222/300/300"
           />
         </div>
+      </div>      
+      <div class="w-full flex justify-center p-3">
+        <button
+          type="button"
+          class="text-white text-[15px] font-semibold rounded-full bg-[#EF5465] hover:bg-[#D8384A] px-8 py-2 text-center"
+        >
+          ADD ARTISTS
+        </button>
       </div>
     </div>
   </div>
