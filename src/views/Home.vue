@@ -181,8 +181,7 @@
             src="https://picsum.photos/id/222/300/300"
           />
         </div>
-      </div>
-      
+      </div>      
       <div class="w-full flex justify-center p-3">
         <button
           type="button"
