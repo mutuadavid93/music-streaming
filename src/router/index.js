@@ -1,24 +1,27 @@
 import { createRouter, createWebHistory } from "vue-router";
-import HomeView from "@/views/Home.vue";
-import AboutView from "@/views/About.vue";
 
 const routes = [
   {
     path: "/",
     name: "Home",
-    component: HomeView
+    component: () => import("@/views/Home.vue"), // Lazy loading
   },
   {
     path: "/about-us",
     name: "About",
-    component: AboutView
-  }
+    component: () => import("@/views/About.vue"), // Lazy loading,
+  },
+  {
+    path: "/artist",
+    name: "Artist",
+    component: () => import("@/views/Artist.vue"), // Lazy loading,
+  },
 ];
 
 const router = createRouter({
   // Provide the history implementation to use. We are using the hash history for simplicity here.
   history: createWebHistory(),
-  routes
+  routes,
 });
 
 export default router;
