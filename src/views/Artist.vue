@@ -98,12 +98,48 @@
     <div id="SongSection" class="max-w-[1500px] mx-auto">
       <div class="pl-8">
         <div class="text-white text-3xl font-semibold mb-7">Top Tracks</div>
+
+        <!-- HINT: Trick to placing an icon inside of an input field. set input's outline-none -->
+        <div
+          class="flex items-center border border-[#525254] bg-[#23232D] rounded-sm text-[#C9C9C9] w-[300px]"
+        >
+          <Magnify fillColor="#9B9BA1" class="px-1" />
+          <input
+            type="text"
+            class="w-full py-[5px] bg-[#23232D] text-sm placeholder-[#7E7E7E] outline-none ring-0 hover:ring-0"
+            placeholder="Search within tracks"
+          />
+        </div>
       </div>
+
+      <div class="mb-4"></div>
+
+      <!-- List of all songs 
+      - TIP: The min-w-[590px] class specifies a minimum width of 590 pixels for an 
+      element and applies that width to all screen sizes
+
+      - items-center, aligns child elements centered vertically within the container
+      -->
+      <div
+        class="flex items-center justify-between min-w-[590px] mx-8 border-b border-[#302D2D] py-2.5 px-1.5"
+      >
+        <div class="text-xs font-light text-[#AEAEAE]">TRACK</div>
+        <ClockTimeFiveOutline fillColor="#AEAEAE" :size="20" />
+      </div>
+
+      <ul
+        class="w-full mx-8 pr-16 min-w-[650px]"
+        v-for="track in artist.tracks"
+        :key="track"
+      >
+        <SongRow v-if="track" :track="track" />
+      </ul>
     </div>
   </div>
 </template>
 
 <script setup>
+import SongRow from "@/components/SongRow.vue";
 import Magnify from "vue-material-design-icons/Magnify.vue";
 import Play from "vue-material-design-icons/Play.vue";
 import Pause from "vue-material-design-icons/Pause.vue";
