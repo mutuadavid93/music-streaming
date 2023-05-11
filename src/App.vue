@@ -1,12 +1,3 @@
-<script setup>
-import { RouterView } from "vue-router";
-
-// Icons
-import Magnify from "vue-material-design-icons/Magnify.vue";
-import Bell from "vue-material-design-icons/Bell.vue";
-import SideMenuItem from "@/components/SideMenuItem.vue";
-</script>
-
 <template>
   <!-- Top Nav -->
   <div
@@ -78,6 +69,36 @@ import SideMenuItem from "@/components/SideMenuItem.vue";
     id="TheBox"
     class="fixed w-[calc(100%-240px)] h-[calc(100%-56px)] ml-[240px] mt-[56px] overflow-x-auto"
   >
-    <RouterView class="text-[#FFFFFF]"/>
+    <RouterView class="text-[#FFFFFF]" />
   </div>
+
+  <!-- Music Player Will Appear as Modal -->
+  <MusicPlayer v-if="currentTrack" />
 </template>
+
+<script setup>
+import { onBeforeMount } from "vue";
+import { RouterView } from "vue-router";
+
+// Icons
+import Magnify from "vue-material-design-icons/Magnify.vue";
+import Bell from "vue-material-design-icons/Bell.vue";
+import SideMenuItem from "@/components/SideMenuItem.vue";
+
+// Music Player Added to App. Since App component acts as body element
+import MusicPlayer from "@/components/MusicPlayer.vue";
+
+// Pinia
+import { useSongStore } from "@/stores/song";
+import { storeToRefs } from "pinia";
+
+const useSong = useSongStore();
+const { currentTrack, isPlaying, isLyrics, trackTime } = storeToRefs(useSong);
+
+onBeforeMount(() => {
+  // reset below state whenever the page is reloaded
+  isPlaying.value = false;
+  isLyrics.value = false;
+  trackTime.value = "0:00";
+});
+</script>
