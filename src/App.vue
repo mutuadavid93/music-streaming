@@ -74,6 +74,12 @@
 
   <!-- Music Player Will Appear as Modal -->
   <MusicPlayer v-if="currentTrack" />
+
+  <!-- Song Lyrics Will Appear as Modal -->
+  <SongLyrics
+    v-if="isLyrics"
+    :class="{ 'animate__animated animate__slideInUp animate__faster': isLyrics }"
+  />
 </template>
 
 <script setup>
@@ -87,6 +93,7 @@ import SideMenuItem from "@/components/SideMenuItem.vue";
 
 // Music Player Added to App. Since App component acts as body element
 import MusicPlayer from "@/components/MusicPlayer.vue";
+import SongLyrics from "@/components/SongLyrics.vue";
 
 // Pinia
 import { useSongStore } from "@/stores/song";
