@@ -2,7 +2,8 @@
   <div
     id="MusicPlayer"
     v-if="audio"
-    class="fixed flex min-w-[1000px] items-center justify-between bottom-0 w-full z-50 h-[80px] bg-[#23232D] border-t border-t-[#383838]"
+    class="fixed flex min-w-[1000px] items-center justify-between bottom-0 
+    w-full z-50 h-[80px] bg-[#23232D] border-t border-t-[#383838]"
   >
     <div class="flex items-center w-2/12">
       <div class="flex items-center justify-center h-[30px] pl-4">
