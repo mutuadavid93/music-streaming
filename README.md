@@ -1,7 +1,17 @@
-# Vue 3 + Vite
+# Music Streaming Application
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is a streaming application which takes after the notorious commercial Deezer player.
+The aim is to demostrate playing music and lyrics
 
-## Recommended IDE Setup
+# Stack Used
+- [Vue 3](https://vuejs.org)
+- [Vite](https://vitejs.dev)
+- [Pinia](https://pinia.vuejs.org)
+- [TailwindCSS](https://tailwindcss.com)
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### Features
+
+- Below is a video overview of roughly how the application looks and the feature being demoed.
+
+<video src="./deezer-clone-2023-05-12_11.50.35.mp4" controls="controls" style="max-width: 730px;">
+</video>
